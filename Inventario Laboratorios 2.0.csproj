@@ -46,17 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Acceso.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Acceso.Designer.cs">
+      <DependentUpon>Acceso.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="LaboratorioCómputo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="LaboratorioCómputo.Designer.cs">
+      <DependentUpon>LaboratorioCómputo.cs</DependentUpon>
     </Compile>
     <Compile Include="LaboratorioIdiomas.cs">
       <SubType>Form</SubType>
@@ -64,16 +64,30 @@
     <Compile Include="LaboratorioIdiomas.Designer.cs">
       <DependentUpon>LaboratorioIdiomas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Menú.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menú.Designer.cs">
+      <DependentUpon>Menú.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRIMERA_PRUEBA_HOPEDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PRIMERA_PRUEBA_HOPEDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Acceso.resx">
+      <DependentUpon>Acceso.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="LaboratorioCómputo.resx">
+      <DependentUpon>LaboratorioCómputo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LaboratorioIdiomas.resx">
       <DependentUpon>LaboratorioIdiomas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menú.resx">
+      <DependentUpon>Menú.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -85,6 +99,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="PRIMERA_PRUEBA_HOPEDataSet.xsc">
+      <DependentUpon>PRIMERA_PRUEBA_HOPEDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PRIMERA_PRUEBA_HOPEDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PRIMERA_PRUEBA_HOPEDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PRIMERA_PRUEBA_HOPEDataSet.xss">
+      <DependentUpon>PRIMERA_PRUEBA_HOPEDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -99,7 +124,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Logo-CECyTE.png" />
+    <Resource Include="Resources\Logo-CECyTE.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PRIMERA PRUEBA HOPE.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

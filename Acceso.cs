@@ -10,15 +10,11 @@ using System.Windows.Forms;
 
 namespace Inventario_Laboratorios_2._0
 {
-    public partial class Form1 : Form
+    public partial class Acceso : Form
     {
-        public Form1()
+        public Acceso()
         {
             InitializeComponent();
-        }
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -28,7 +24,7 @@ namespace Inventario_Laboratorios_2._0
             Usuario_Consultor = "CECyTE_Consulta";
             Contraseña_Consultor = "consultaLabs";
 
-            Usuario_Administrador = "CECyTE_Administra";
+            Usuario_Administrador = "CECyTE_Administrador";
             Contraseña_Administrador = "administraLabs";
 
             bool adminpower;
@@ -36,10 +32,13 @@ namespace Inventario_Laboratorios_2._0
             switch (usuariotxbx.Text)
             {
                 case "CECyTE_Consulta":
-                    if (contraseñatxbx.Text == "consultaLabs")
+                    if (contraseñatxbx.Text == Contraseña_Consultor && usuariotxbx.Text==Usuario_Consultor)
                     {
                         adminpower = false;
-                    //    goto Inicio_Exitoso;
+                        this.Hide();
+                        MessageBox.Show("¡Inicio de sesión exitoso!");
+                        Menú menu = new Menú();
+                        menu.Show();
                     }
                     else
                     {
@@ -48,10 +47,13 @@ namespace Inventario_Laboratorios_2._0
                     }
                     break;
                 case "CECyTE_Administrador":
-                    if (contraseñatxbx.Text == "administraLabs")
+                    if (contraseñatxbx.Text == Contraseña_Administrador && usuariotxbx.Text==Usuario_Administrador)
                     {
                         adminpower = true;
-                    //    goto Inicio_Exitoso;
+                        this.Hide();
+                        MessageBox.Show("¡Inicio de sesión exitoso!");
+                        Menú menu = new Menú();
+                        menu.Show();
                     }
                     else
                     {
@@ -67,13 +69,12 @@ namespace Inventario_Laboratorios_2._0
             //Inicio_Exitoso: Form1.
 
             //   if (contraseñatxbx.Text = Contraseña_Consultor && usuariotxbx.Text = Usuario_Consultor && CasillaNoSoyUnRobot.Checked = true)
-            //     MessageBox.Show("Ha iniciado sesión...");
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Acceso_Load(object sender, EventArgs e)
         {
-
+          
         }
     }
 }
